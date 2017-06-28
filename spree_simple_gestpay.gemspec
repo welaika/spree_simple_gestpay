@@ -8,16 +8,16 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_simple_gestpay'
   s.version     = SpreeSimpleGestpay.version
-  s.summary     = 'Add extension summary here'
-  s.description = 'Add (optional) extension description here'
+  s.summary     = 'Banca Sella Gestpay unofficial gateway for Spree'
+  s.description = 'It supports only "direct" payment method'
   s.required_ruby_version = '>= 2.2.2'
 
-  s.author    = 'You'
-  s.email     = 'you@example.com'
-  s.homepage  = 'https://github.com/your-github-handle/spree_simple_gestpay'
+  s.author    = 'Fabrizio Monti'
+  s.email     = 'fabrizio.monti@welaika.com'
+  s.homepage  = 'https://github.com/welaika/spree_simple_gestpay'
   s.license = 'BSD-3-Clause'
 
-  # s.files       = `git ls-files`.split("\n")
+  s.files = `git ls-files`.split("\n")
   # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
@@ -34,7 +34,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'pg'
-  s.add_development_dependency 'mysql2'
+  # s.add_development_dependency 'pg'
+  # s.add_development_dependency 'mysql2'
+  s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'appraisal'
 end
