@@ -1,5 +1,6 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  spree:
+    simple_gestpay:
+      pay_with_this_method: Pay with Banca Sella
+      invalid_gestpay_order: Cannot proceed to GestPay payment Please try again later. Error code: E001
+      encryption_error: Cannot proceed to GestPay payment. Please try again later. Error code: E002
