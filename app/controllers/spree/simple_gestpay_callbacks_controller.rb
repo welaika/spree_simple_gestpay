@@ -18,16 +18,18 @@ module Spree
       end
 
       order = Spree::Order.find_by!(number: transaction_result.shop_transaction_id)
-      payment = order.payments.create!(
-        amount: transaction_result.amount,
-        payment_method: payment_method
-      )
-      order.next!
-      if order.complete?
-        # Manually capture payment because payment method does not a `source`,
-        # so Spree won't automatically capture the payment, even if `auto_capture?` is true
-        payment.capture!
-        render text: 'OK', status: :ok
+      order.with_lock do
+        payment = order.payments.create!(
+          amount: transaction_result.amount,
+          payment_method: payment_method
+        )
+        order.next!
+        if order.complete?
+          # Manually capture payment because payment method does not a `source`,
+          # so Spree won't automatically capture the payment, even if `auto_capture?` is true
+          payment.capture!
+          render text: 'OK', status: :ok
+        end
       end
     end
 
@@ -40,7 +42,7 @@ module Spree
 
     def failure
       # redirect_to checkout_state_path(order.state)
-      render text: 'Qualcosa che non va'
+      render text: 'C\'e\' qualcosa che non va'
     end
 
     private
