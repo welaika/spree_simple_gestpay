@@ -13,7 +13,7 @@ module Spree
       transaction_result = SimpleGestpay::WsDecrypt.run!(crypted_string: encrypted_string)
 
       if transaction_result.failure?
-        logger.tagged(['SpreeSimpleGestpay', 'Notify', 'Failure']) { logger.warning('Errore') }
+        logger.tagged(['SpreeSimpleGestpay', 'Notify', 'Failure']) { logger.warning('Errore MOSTRUOSO') }
         render text: '', status: :ok
         return
       end
