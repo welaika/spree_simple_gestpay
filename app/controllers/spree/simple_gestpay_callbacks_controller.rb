@@ -48,8 +48,7 @@ module Spree
     private
 
     def ensure_validity_of_shop_login
-      raise SpreeSimpleGestpay::ShopLoginMismatch
-        if shop_login != SimpleGestpay.configuration.shop_login
+      raise SpreeSimpleGestpay::ShopLoginMismatch if shop_login != SimpleGestpay.configuration.shop_login
     end
 
     def shop_login
