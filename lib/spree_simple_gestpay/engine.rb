@@ -15,7 +15,8 @@ module SpreeSimpleGestpay
       end
     end
 
-    initializer "spree.register.payment_methods" do |app|
+    initializer 'spree.simple_gestpay.payment_methods',
+                after: 'spree.register.payment_methods' do |app|
       app.config.spree.payment_methods << Spree::Gateway::SimpleGestpay
     end
 
