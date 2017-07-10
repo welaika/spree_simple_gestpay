@@ -4,8 +4,6 @@ module Spree
   # to their payment page). In fact, we never need to store (even in memory)
   # credit card info.
   class PaymentMethod::GestpayRedirect < PaymentMethod
-    preference :shop_login, :string
-
     # Even if this is true, Spree won't automatically capture
     # because source is not required (`source_required?` => false)
     def auto_capture?
