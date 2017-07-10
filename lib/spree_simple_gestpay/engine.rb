@@ -17,7 +17,7 @@ module SpreeSimpleGestpay
 
     initializer 'spree.simple_gestpay.payment_methods',
                 after: 'spree.register.payment_methods' do |app|
-      app.config.spree.payment_methods << Spree::Gateway::SimpleGestpay
+      app.config.spree.payment_methods << Spree::PaymentMethod::GestpayRedirect
     end
 
     config.to_prepare &method(:activate).to_proc

@@ -63,7 +63,7 @@ module Spree
       # Simplistic way to get the payment method
       # We assume there is only one SimpleGestpay payment methods in the database
       # and even if the are more of them, we take the first
-      Spree::PaymentMethod.find_by!(type: 'Spree::Gateway::SimpleGestpay')
+      Spree::PaymentMethod.find_by!(type: 'Spree::PaymentMethod::GestpayRedirect')
     end
   end
 end
