@@ -39,6 +39,6 @@ Spree::CheckoutController.class_eval do
 
     payment_method = Spree::PaymentMethod
                      .find(payment_attributes.first[:payment_method_id])
-    payment_method.is_a?(Spree::Gateway::SimpleGestpay)
+    payment_method.is_a?(Spree::PaymentMethod::GestpayRedirect)
   end
 end
