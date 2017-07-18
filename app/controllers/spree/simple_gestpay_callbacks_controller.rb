@@ -31,7 +31,8 @@ module Spree
           # Manually capture payment because payment method does not a `source`,
           # so Spree won't automatically capture the payment, even if `auto_capture?` is true
           payment.capture!
-          render text: 'OK', status: :ok
+          # GestPay needs an HTML page with status 200
+          render html: "<html><body>OK</body></html>".html_safe, status: :ok
         end
       end
     end
