@@ -38,7 +38,7 @@ module Spree
     end
 
     def success
-      flash.notice = Spree.t(:order_processed_successfully)
+      flash.notice = Spree.t('order_processed_successfully')
       flash[:order_completed] = true
       session[:order_id] = nil
       redirect_to root_path
