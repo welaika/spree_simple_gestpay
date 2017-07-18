@@ -46,7 +46,8 @@ module Spree
 
     def failure
       # redirect_to checkout_state_path(order.state)
-      render text: 'C\'e\' qualcosa che non va'
+      flash.alert = Spree.t('order_failure', scope: 'simple_gestpay')
+      redirect_to root_path
     end
 
     private
