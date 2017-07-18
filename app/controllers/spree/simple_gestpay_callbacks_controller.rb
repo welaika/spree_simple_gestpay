@@ -14,7 +14,7 @@ module Spree
 
       if transaction_result.failure?
         logger.tagged(%w[SpreeSimpleGestpay Notify Failure]) do
-          logger.warning("Error with transaction: #{transaction_result.shop_transaction_id}")
+          logger.warn("Error with transaction: #{transaction_result.shop_transaction_id}")
         end
         render text: '', status: :ok
         return
