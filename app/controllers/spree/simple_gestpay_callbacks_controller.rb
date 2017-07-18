@@ -16,7 +16,8 @@ module Spree
         logger.tagged(%w[SpreeSimpleGestpay Notify Failure]) do
           logger.warn("Error with transaction: #{transaction_result.shop_transaction_id}")
         end
-        render text: '', status: :ok
+        # GestPay needs an HTML page with status 200
+        render html: "<html><body>OK</body></html>".html_safe, status: :ok
         return
       end
 
