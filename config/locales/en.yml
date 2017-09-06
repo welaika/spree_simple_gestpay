@@ -1,7 +1,7 @@
 en:
   spree:
     simple_gestpay:
-      pay_with_this_method: Pay with Banca Sella
+      pay_with_this_method: Pay with Banca Sella (Credit Card)
       invalid_gestpay_order: Cannot proceed to GestPay payment Please try again later. Error code E001.
       encryption_error: Cannot proceed to GestPay payment. Please try again later. Error code E002.
       order_failure: ERROR. Il tuo ordine HAS NOT been processed. Please try again later or contact the customer service. Errore code E003.
