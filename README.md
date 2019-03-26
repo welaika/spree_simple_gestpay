@@ -47,4 +47,4 @@ If you'd like to contribute, please take a look at the
 [instructions](CONTRIBUTING.md) for installing dependencies and crafting a good
 pull request.
 
-Copyright (c) 2017-2018 [weLaika](https://dev.welaika.com), released under the New BSD License
+Copyright (c) 2017-2019 [weLaika](https://dev.welaika.com), released under the New BSD License
